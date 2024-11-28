@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_umur",
+						"type": "uint256"
+					}
+				],
+				"name": "addSeseorang",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listOfWarga",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "umur",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"beginer-solidity-smart-contract-development/SimpleStoragee.sol": "SimpleStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"beginer-solidity-smart-contract-development/SimpleStoragee.sol": {
+			"keccak256": "0xaa305fbed64190d6569f0d736ee66830ac87cfaada47c7815e42f0c8c380ddd8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9d451122e696ceb0a85831d97f659ee4101a6c8bb596d404e8f268507ebf9b85",
+				"dweb:/ipfs/QmTFJc9c7KoEZcyTJ56ZxMwvyt2ds9tSeNitgHDvdeZEE2"
+			]
+		}
+	},
+	"version": 1
+}
