@@ -38,6 +38,7 @@ contract StorageFactory {
 
     function createSimpleStorageContract() public {
         // logika kode untuk membuat contract dari simpleStorage.sol
+        simpleStorage = new SimpleStorage();
     }    
 
 }
