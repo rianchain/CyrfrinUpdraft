@@ -5,6 +5,7 @@ import {SimpleStorage} from "./SimpleStorage.sol";
 
 contract AddFiveStorage is SimpleStorage {
 
+    // fungsi overide untuk terhbung dan mengambil fungsi turunan dari SimpleStorage untuk di modifikasi
     function store(uint256 _newNumber) public override {
         myFavoriteNumber = _newNumber + 5;
     }

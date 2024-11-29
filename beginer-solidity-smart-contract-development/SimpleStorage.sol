@@ -17,6 +17,7 @@ contract SimpleStorage {
     mapping(string => uint256) public namaToUmur;
 
 
+    // fungsi virtual untuk menurunkan fungsi kepada files lain agar dapat di modif
     function store(uint256 _favoriteNumber) public virtual {
         myFavoriteNumber = _favoriteNumber;
     }
@@ -26,6 +27,7 @@ contract SimpleStorage {
 
     function addSeseorang(string memory _name, uint256 _umur) public {
         listOfWarga.push( Seseorang(_umur, _name) );
+        // nameToUmur untuk memasukan nama yang akan menampikan umur di variable namaToUmur
         namaToUmur[_name] = _umur;
     }
  }
