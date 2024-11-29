@@ -16,12 +16,10 @@ contract SimpleStorage {
     // mapping untuk memetakan string ke angka (memasukan nama = hasilnya umur berupa angka)
     mapping(string => uint256) public namaToUmur;
 
-    // Seseorang public tedy = Seseorang({favoriteNumber: 88, name: "tedy"});
 
     function store(uint256 _favoriteNumber) public {
         myFavoriteNumber = _favoriteNumber;
     }
-
     function retrieve() public view returns(uint256) {
         return myFavoriteNumber;
     }
