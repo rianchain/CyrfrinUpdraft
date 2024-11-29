@@ -10,6 +10,7 @@ contract SimpleStorage {
         string name;
     }
 
+    // dynamic arrays variable untuk menyimpan banyak data tak terhingga
     Seseorang[] public listOfWarga;
 
     // mapping untuk memetakan string ke angka (memasukan nama = hasilnya umur berupa angka)
