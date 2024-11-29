@@ -9,7 +9,7 @@ contract StorageFactory {
     // deklarasi contract yang kita import dengan penamaan baru
     SimpleStorage[] public listOfSimpleStorageContracts;
     // address[] public listOfSimpleStorageAddresses;
-     
+
 
 
     function createSimpleStorageContract() public {
@@ -24,8 +24,7 @@ contract StorageFactory {
     }
 
     function sfGet(uint256 _simpleStorageIndex) public view returns(uint256) {
-        SimpleStorage mySimpleStorage = listOfSimpleStorageContracts[_simpleStorageIndex];
-        return mySimpleStorage.retrieve();
+        return listOfSimpleStorageContracts[_simpleStorageIndex].retrieve();
     }
 
 }
