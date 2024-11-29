@@ -29,3 +29,7 @@ contract SimpleStorage {
         namaToUmur[_name] = _umur;
     }
  }
+
+ contract SimpleStorage2 {
+    string public text = "Hello Nigga";
+ }
