@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 contract SimpleStorage {
 
-    uint256 private myFavoriteNumber;
+    uint256 internal myFavoriteNumber;
 
     struct Seseorang {
         uint256 umur;
@@ -17,7 +17,7 @@ contract SimpleStorage {
     mapping(string => uint256) public namaToUmur;
 
 
-    function store(uint256 _favoriteNumber) public {
+    function store(uint256 _favoriteNumber) public virtual {
         myFavoriteNumber = _favoriteNumber;
     }
     function retrieve() public view returns(uint256) {

@@ -5,8 +5,8 @@ import {SimpleStorage} from "./SimpleStorage.sol";
 
 contract AddFiveStorage is SimpleStorage {
 
-    function sayNigga() public pure returns(string memory) {
-        return "FUck Nigga!";
+    function store(uint256 _newNumber) public override {
+        myFavoriteNumber = _newNumber + 5;
     }
 
 }
