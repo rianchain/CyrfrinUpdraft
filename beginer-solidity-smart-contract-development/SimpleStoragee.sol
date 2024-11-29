@@ -17,7 +17,6 @@ contract SimpleStorage {
 
     // Seseorang public tedy = Seseorang({favoriteNumber: 88, name: "tedy"});
 
-
     function store(uint256 _favoriteNumber) public {
         myFavoriteNumber = _favoriteNumber;
     }
