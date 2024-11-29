@@ -12,6 +12,9 @@ contract SimpleStorage {
 
     Seseorang[] public listOfWarga;
 
+    // mapping untuk memetakan string ke angka (memasukan nama = hasilnya umur berupa angka)
+    mapping(string => uint256) public namaToUmur;
+
     // Seseorang public tedy = Seseorang({favoriteNumber: 88, name: "tedy"});
 
 
@@ -25,5 +28,6 @@ contract SimpleStorage {
 
     function addSeseorang(string memory _name, uint256 _umur) public {
         listOfWarga.push( Seseorang(_umur, _name) );
+        namaToUmur[_name] = _umur;
     }
  }
