@@ -7,12 +7,20 @@ import {SimpleStorage} from "./SimpleStorage.sol";
 contract StorageFactory {
 
     // deklarasi contract yang kita import dengan penamaan baru
-    SimpleStorage public simpleStorage;
+    SimpleStorage[] public listOfSimpleStorageContracts;
+    // address[] public listOfSimpleStorageAddresses;
+     
 
 
     function createSimpleStorageContract() public {
         // logika kode untuk membuat contract dari simpleStorage.sol
-        simpleStorage = new SimpleStorage();
+        SimpleStorage newSimpleStorageContract = new SimpleStorage();
+        listOfSimpleStorageContracts.push(newSimpleStorageContract);
     }    
+
+    function sfStore(uint256 _simpleStorageindex, uint256 _newSimpleStorageNumber) public {
+        SimpleStorage mySimpleStorage = listOfSimpleStorageContracts[_simpleStorageindex];
+        mySimpleStorage.store(_newSimpleStorageNumber);
+    }
 
 }
