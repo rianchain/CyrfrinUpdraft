@@ -11,7 +11,7 @@ contract FundMe {
     function fund() public payable {
         // Allow users to send $
         // Have a minimum sent in $
-        require(msg.value > 1e18, "Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
+        require(msg.value > 1e18, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
     }
 
     function withdraw() public {
