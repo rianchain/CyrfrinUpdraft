@@ -10,4 +10,6 @@ contract FundMe {
 
     function fund() public {}
 
+    function withdraw() public {}
+
 }
