@@ -8,10 +8,10 @@ pragma solidity ^0.8.20;
 
 contract FundMe {
 
-    function fund() public {
+    function fund() public payable {
         // Allow users to send $
         // Have a minimum sent in $
-        require
+        require(msg.value > 1e18, "Minimum deposit is 1 eth!"); // 1e18 = 1 eth = 100000000000000000
     }
 
     function withdraw() public {
