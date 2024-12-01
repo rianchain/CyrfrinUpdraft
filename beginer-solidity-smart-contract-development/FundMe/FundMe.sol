@@ -12,6 +12,8 @@ contract FundMe {
         
     }
 
-    function withdraw() public {}
+    function withdraw() public {
+        
+    }
 
 }
