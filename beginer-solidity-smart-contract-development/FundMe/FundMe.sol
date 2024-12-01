@@ -11,6 +11,7 @@ contract FundMe {
     function fund() public {
         // Allow users to send $
         // Have a minimum sent in $
+        require
     }
 
     function withdraw() public {
