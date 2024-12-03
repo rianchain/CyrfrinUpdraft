@@ -20,4 +20,8 @@ contract FundMe {
 
     }
 
+    function getPrice() public {
+        
+    }
+
 }
