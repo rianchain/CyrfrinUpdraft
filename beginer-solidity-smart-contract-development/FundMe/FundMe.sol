@@ -8,6 +8,8 @@ pragma solidity ^0.8.20;
 
 contract FundMe {
 
+    uint256 public minimumUsd = 10;
+
     function fund() public payable {
         // Allow users to send $
         // Have a minimum sent in $
