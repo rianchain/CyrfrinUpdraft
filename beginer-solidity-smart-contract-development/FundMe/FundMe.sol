@@ -21,6 +21,10 @@ contract FundMe {
     }
 
     function getPrice() public {
+
+    }
+
+    function getConversionRate() public {
         
     }
 
