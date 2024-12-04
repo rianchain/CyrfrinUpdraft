@@ -11,7 +11,7 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 contract FundMe {
 
     uint256 public minimumUsd = 5000000000000000;
-    address public funders;
+    address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
 
