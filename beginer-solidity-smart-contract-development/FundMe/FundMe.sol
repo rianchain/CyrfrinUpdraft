@@ -20,6 +20,7 @@ contract FundMe {
         // Have a minimum sent in $
         require(getConversionRate(msg.value) >= minimumUsd, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
         funders.push(msg.sender);
+        addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
     }
 
     function withdraw() public {
