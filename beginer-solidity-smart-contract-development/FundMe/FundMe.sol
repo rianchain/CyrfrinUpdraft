@@ -33,7 +33,7 @@ contract FundMe {
         addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public  {
         require(msg.sender == owner, "U must be a owner!");
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
@@ -45,7 +45,7 @@ contract FundMe {
         
     }
 
-    modifier() {
+    modifier onlyOwner() {
         require(msg.sender == owner, "Sender is not the owner!");
     }
 
