@@ -42,7 +42,7 @@ contract FundMe {
 
         // payable(msg.sender).transfer(address(this).balance);    
 
-        (bool callSuccess, ) = payable(msg.sender).cal{value: address(this).balance}("");
+        (bool callSuccess, ) = payable(msg.sender).call{value: address(this).balance}("");
         require(callSuccess, "Call Failed!");
         
     }
