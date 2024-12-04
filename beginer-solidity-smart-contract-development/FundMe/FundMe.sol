@@ -9,6 +9,7 @@ pragma solidity ^0.8.0;
 import {PriceConverter} from "./PriceConverter.sol"
 
 contract FundMe {
+    using PriceConverter for uint256;
 
     uint256 public minimumUsd = 5000000000000000;
     address[] public funders;
