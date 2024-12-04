@@ -34,14 +34,16 @@ contract FundMe {
     }
 
     function withdraw() public onlyOwner() {
-        require(msg.sender == owner, "U must be a owner!");
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
         }
         funders = new address[](0);
 
-        payable(msg.sender).transfer(address(this).balance);    
+        // payable(msg.sender).transfer(address(this).balance);    
+
+        (bool callSuccess, ) = payable(msg.sender).cal{value: address(this).balance}("");
+        require(callSuccess, "Call Failed!");
         
     }
 
