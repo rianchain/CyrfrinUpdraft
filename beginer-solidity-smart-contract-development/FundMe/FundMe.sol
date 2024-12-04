@@ -34,6 +34,7 @@ contract FundMe {
     }
 
     function withdraw() public {
+        require(msg.sender == owner, "U must be a owner!");
         for(uint256 funderIndex = 0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
             addressToAmountFunded[funder] = 0;
