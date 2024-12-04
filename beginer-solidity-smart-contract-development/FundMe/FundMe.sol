@@ -16,6 +16,12 @@ contract FundMe {
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
 
     function fund() public payable {
         // Allow users to send $
@@ -34,7 +40,9 @@ contract FundMe {
         }
         funders = new address[](0);
 
-        payable(msg.sender).transfer(address(this).balance);    }
+        payable(msg.sender).transfer(address(this).balance);    
+        
+    }
 
     
 
