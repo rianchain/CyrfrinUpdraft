@@ -10,7 +10,7 @@ import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interf
 
 contract FundMe {
 
-    uint256 public minimumUsd = ;
+    uint256 public minimumUsd = 5000000000000000;
 
 
     function fund() public payable {
