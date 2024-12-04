@@ -6,7 +6,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import Price
+import {PriceConverter} from "./PriceConverter.sol"
 
 contract FundMe {
 
