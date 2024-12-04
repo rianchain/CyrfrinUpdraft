@@ -42,6 +42,7 @@ contract FundMe {
     }
 
     function getConversionRate(uint256 ethAmount) public view returns (uint256){
+        // msg.value.getConversionRate();
         uint256 ethPrice = getPrice();
         uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
         return ethAmountInUsd;
