@@ -26,10 +26,7 @@ contract FundMe {
 
 
     function fund() public payable {
-        // Allow users to send $
-        // Have a minimum sent in $
-        // msg.value.getConversionRate();
-        // uint256 amountInUsd = msg.value.getConversionRate();
+        
         require(msg.value.getConversionRate() >= MINIMUM_USD, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
