@@ -32,7 +32,7 @@ contract FundMe {
         // uint256 amountInUsd = msg.value.getConversionRate();
         require(msg.value.getConversionRate() >= MINIMUM_USD, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
         funders.push(msg.sender);
-        addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
+        addressToAmountFunded[msg.sender] += msg.value;
     }
 
     function withdraw() public onlyOwner() {
