@@ -49,4 +49,8 @@ contract FundMe {
         _;
     }
 
+    receive() external payable {
+        fund();
+    }
+
 }
