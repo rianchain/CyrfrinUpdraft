@@ -25,7 +25,7 @@ library PriceConverter {
         , // uint256 updatedAt
         // uint80 answeredInRound
     ) = priceFeed.latestRoundData();
-    return uint256(price * 1e10);
+    return uint256(price * 10000000000);
     }
 
     function getConversionRate(uint256 ethAmount) internal view returns (uint256){
