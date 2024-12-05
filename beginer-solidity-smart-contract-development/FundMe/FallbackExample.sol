@@ -12,3 +12,5 @@ contract FallbackExample {
     }
     
 }
+
+// function bawaan ini untuk menerima ether dengan hanya mengirim ether tanpa harus menggunakan function
