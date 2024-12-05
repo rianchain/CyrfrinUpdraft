@@ -11,7 +11,7 @@ import {PriceConverter} from "./PriceConverter.sol";
 contract FundMe {
     using PriceConverter for uint256;
 
-    uint256 public minimumUsd = 5e18;
+    uint256 public MINIMUM_USD = 5 * 10 ** 18;
 
     address[] public funders;
     mapping(address => uint256) public addressToAmountFunded;
@@ -28,7 +28,7 @@ contract FundMe {
         // Have a minimum sent in $
         // msg.value.getConversionRate();
         // uint256 amountInUsd = msg.value.getConversionRate();
-        require(msg.value.getConversionRate() >= minimumUsd, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
+        require(msg.value.getConversionRate() >= MINIMUM_USD, "Didn't send enough ETH. At least Minimum deposit is 1 ETH!"); // 1e18 = 1 eth = 100000000000000000
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] = addressToAmountFunded[msg.sender] + msg.value;
     }
