@@ -24,7 +24,7 @@ library PriceConverter {
     function getConversionRate(uint256 ethAmount) internal view returns (uint256){
         // msg.value.getConversionRate();
         uint256 ethPrice = getPrice();
-        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
+        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1000000000000000000;
         return ethAmountInUsd;
     }
 
