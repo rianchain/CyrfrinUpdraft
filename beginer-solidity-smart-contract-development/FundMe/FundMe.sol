@@ -14,7 +14,7 @@ contract FundMe {
     uint256 public minimumUsd = 5e18;
 
     address[] public funders;
-    mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
+    mapping(address => uint256) public addressToAmountFunded;
 
     address public owner;
 
