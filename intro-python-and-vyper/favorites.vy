@@ -37,4 +37,7 @@ def add_person(name: String[100], favorite_number: uint256):
     self.list_of_numbers[self.index] = favorite_number
 
     # Add the person to the person's list
+    new_person Person = Person(favorite_number = my_favorite_number, name=name)
+
+
     self.index = self.index + 1
