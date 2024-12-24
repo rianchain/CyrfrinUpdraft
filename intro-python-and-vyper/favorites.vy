@@ -4,7 +4,9 @@
 my_favorite_number: uint16 # 0 as a default number
 owner: public(address)
 
-
+@deploy 
+def __init__():
+    self.owner = msg.sender
 
 
 @external
