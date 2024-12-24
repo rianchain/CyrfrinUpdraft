@@ -15,6 +15,8 @@ index: public(uint256)
 @deploy 
 def __init__():
     self.owner = msg.sender
+    self.my_favorite_number = 69
+    self.index = 0
 
 @external
 def setNum(_newFavNumber: uint256):
