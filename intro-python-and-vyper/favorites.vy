@@ -2,6 +2,10 @@
 # @license MIT
 
 my_favorite_number: uint16 # 0 as a default number
+owner: public(address)
+
+
+
 
 @external
 def setNum(_newFavNumber: uint16):
