@@ -17,6 +17,7 @@ def __init__():
     self.owner = msg.sender
     self.my_favorite_number = 69
     self.index = 0
+    self.my_name = "Rianzi"
 
 @external
 def setNum(_newFavNumber: uint256):
