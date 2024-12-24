@@ -20,17 +20,17 @@ def __init__():
     self.my_name = "Rianzi"
 
 @external
-def setNum(_newFavNumber: uint256):
+def setFavNum(_newFavNumber: uint256):
     self.my_favorite_number = _newFavNumber
 
 
 @external 
 @view
-def retrieve() -> uint256:
+def myFavNum() -> uint256:
     return self.my_favorite_number
 
 
 @external
-def add_number(favorite_number: uint256):
+def add_number_of_list(favorite_number: uint256):
     self.list_of_numbers[self.index] = favorite_number
-    self.index++ # or self.index = self.index + 1
+    self.index = self.index + 1
