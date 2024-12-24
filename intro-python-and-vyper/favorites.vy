@@ -1,7 +1,8 @@
 #pragma version ^0.4.0
 # @license MIT
 
-has_favorite_number: bool
-my_favorite_number: uint16
-my_wallet_address: address
-# my_decimal: decimal 
+my_favorite_number: public(uint16) # 0 as a default number
+
+@external
+def setNum(_newFavNumber: uint16):
+    self.my_favorite_number = _newFavNumber
