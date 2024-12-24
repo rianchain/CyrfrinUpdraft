@@ -5,7 +5,7 @@ struct Person:
     favorite_number: uint256
     name: String[100]
 
-my_name: String[100]
+my_name: public(String[100])
 my_favorite_number: uint256 # 0 as a default number
 owner: public(address)
 
