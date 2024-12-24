@@ -10,6 +10,7 @@ my_favorite_number: uint256 # 0 as a default number
 owner: public(address)
 
 list_of_numbers: public(uint256[5])
+list_of_people: public(Person[5])
 index: public(uint256)
 
 @deploy 
@@ -31,6 +32,9 @@ def myFavNum() -> uint256:
 
 
 @external
-def add_number_of_list(favorite_number: uint256):
+def add_person(name: String[100], favorite_number: uint256):
+    # Add favorite number to the numbers of list
     self.list_of_numbers[self.index] = favorite_number
+
+    # Add the person to the person's list
     self.index = self.index + 1
