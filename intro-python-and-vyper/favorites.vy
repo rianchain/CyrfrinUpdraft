@@ -26,6 +26,10 @@ def __init__():
 def setFavNum(_newFavNumber: uint256):
     self.my_favorite_number = _newFavNumber
 
+@external
+def setMyName(_newName: String[100]):
+    self.my_name = _newName
+
 
 @external 
 @view
