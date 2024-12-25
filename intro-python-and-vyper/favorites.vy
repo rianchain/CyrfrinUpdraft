@@ -13,6 +13,8 @@ list_of_numbers: public(uint256[5])
 list_of_people: public(Person[5])
 index: public(uint256)
 
+name_to_favorite_number: public( HashMap[String[100], uint256] )
+
 @deploy 
 def __init__():
     self.owner = msg.sender
@@ -39,6 +41,9 @@ def add_person(name: String[100], favorite_number: uint256):
     # Add the person to the person's list
     new_person: Person = Person(favorite_number = favorite_number, name = name)
     self.list_of_people[self.index] = new_person
+
+    # Add the person to the hashMap or mapping
+    self.name_to_favorite_number[name] = favorite_number
 
 
     self.index = self.index + 1
