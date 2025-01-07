@@ -33,5 +33,5 @@ contract SimpleStorage {
  }
 
  contract SimpleStorage2 {
-    string public text = "Hello Nigga";
+    string public text = "Hello Nigger";
  }
